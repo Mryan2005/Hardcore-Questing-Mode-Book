@@ -1,0 +1,13 @@
+language: python
+python: 2.7
+script:
+- mv .travis/_editmode.cfg ./editmode.cfg
+- zip -r hqm.zip ./
+deploy:
+  provider: releases
+  api_key:
+    secure: PgBHVy1Md6x5/7/SUpETxjllm5m+FX+hXirGmoV5LfvDQaHPCQEOu2/bW7j0xdLaqWQt0+coEIu6u0DZJxgXSOMkncyDCkz1X/uZ0c0wzwng/WkQvv9YPsFv/KveAinrsVtH8aVZGqvy1OwWXTFFIMel349DIGhfHPcO09ruEjTxaDWPmWCK035t4Wi7I0jNKuDVEaAcHF7Hsa2LNN2uV5IZAe7nZV9vKsVYqXLYtJ0TwYgMVrD41p/641aZcL9EIwuLWPj3J8VJLRakGojwEtJSq8wNMHZu/+nZYsPBFNjimlUcSiEbgpnEfaVSPjOhup+NLht/1Xt7tTbgqk9sowuS1tKbn72yaIi+Df6RyFdkwUfNUQ7xT+/DcWyxBKTQv1g445EgJHh2DcRs8ehQQHaCI3OhrZNZJQKyO0KwA0r0/BuohFQDP56QsjdWjIGsPC8tWneHtyTvl/6BWP6b7CedHq/eAtUSEbzZlofbQXKoks74D+OrJ1plxjGi1aQGDB4CMHurpQBx2QOUcQ/hUusnuUnwVgwGSrdVRLW07sKEP0CerJokQvnbrnLFMts/J8yBR42qJABF9CxzB2xwod7avMUk1l9zGDse3Z2WxJ1gSzv8ZG8vdZnfxwJkF1KXs9CmSZ1FMl/vWhwwOWoIYCxDg5+tIKVUzLRcYoU6owo=
+  file: ''
+  skip_cleanup: true
+  on:
+    tags: true
