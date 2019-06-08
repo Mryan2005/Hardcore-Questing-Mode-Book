@@ -2,6 +2,10 @@ language: python
 python: 2.7
 script:
 - mv .travis/_editmode.cfg ./editmode.cfg
+- rm -rf ./.travis
+- rm -rf ./.git
+- rm -rf ./.travis.yml
+- rm -rf ./.gitignore
 - zip -r hqm.zip ./
 deploy:
   provider: releases
