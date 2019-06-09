@@ -9,9 +9,14 @@ script:
 - zip -r hqm.zip ./
 deploy:
   provider: releases
-  api_key:
-    secure: PgBHVy1Md6x5/7/SUpETxjllm5m+FX+hXirGmoV5LfvDQaHPCQEOu2/bW7j0xdLaqWQt0+coEIu6u0DZJxgXSOMkncyDCkz1X/uZ0c0wzwng/WkQvv9YPsFv/KveAinrsVtH8aVZGqvy1OwWXTFFIMel349DIGhfHPcO09ruEjTxaDWPmWCK035t4Wi7I0jNKuDVEaAcHF7Hsa2LNN2uV5IZAe7nZV9vKsVYqXLYtJ0TwYgMVrD41p/641aZcL9EIwuLWPj3J8VJLRakGojwEtJSq8wNMHZu/+nZYsPBFNjimlUcSiEbgpnEfaVSPjOhup+NLht/1Xt7tTbgqk9sowuS1tKbn72yaIi+Df6RyFdkwUfNUQ7xT+/DcWyxBKTQv1g445EgJHh2DcRs8ehQQHaCI3OhrZNZJQKyO0KwA0r0/BuohFQDP56QsjdWjIGsPC8tWneHtyTvl/6BWP6b7CedHq/eAtUSEbzZlofbQXKoks74D+OrJ1plxjGi1aQGDB4CMHurpQBx2QOUcQ/hUusnuUnwVgwGSrdVRLW07sKEP0CerJokQvnbrnLFMts/J8yBR42qJABF9CxzB2xwod7avMUk1l9zGDse3Z2WxJ1gSzv8ZG8vdZnfxwJkF1KXs9CmSZ1FMl/vWhwwOWoIYCxDg5+tIKVUzLRcYoU6owo=
-  file: './hqm.zip'
+  api_key: ${key}
+  file: 
+    - "./hqm.zip"
   skip_cleanup: true
   on:
     tags: true
+after_deploy:
+- echo '待续'
+env:
+  global:
+    secure: aH2EnLBAR/s9dHKrRlxzcSFR1e5rLEx8aJgTNoy/k0svlGGRjE+MnPGXTHlimg/y/34Bj87NvpUHq2xmDJystC02YKM3i9Dvl0QqITWc9y1GkZQFbmu1WDE0unltYnfG36190jnXVH5FoHHS2DPyPerZQqXdU+e/JdLc07Q38gT+z7Xq3dIN4jkDZqAm7KViUPJwkxfrbwEA+et02pWNnrLwD5lzLnWBigZbYomWzjNzbWBDsLiR6fSeUnP6EPQWVfjiYBH6rPHOV5j4T0YrwNlnS+qv2bO1chkn6y309ur+TuQ4iH/VLeZfN+gtRyqcxYyM8whhONNegmvA0I2JObx2NnFUm+bHGhSF5oTYLDNjS2v4av3H2BBsMF6kQPdXhAMnmOnB2LSCfKG+BYHLU9Y7VzSPKdl3rYbXcaHWg9g/eM0N+LbAxW+sSBO+qNyb9ontVyjtETgMGeZWgb2R1bA7eGd4KHOdtXKwNpBApMINGFzXFIzkwl3Mh0e6QHqJis/nQJiOJBk3nfLjszl30Y7pdTT/FhcjIdEuLy70YI3LEXYNB002/ilxXFeGvBXxxe0WMSmZ+SJntdL411hOJcNG+CpgSQsmvEZijOVFxx1WLUN6qvNY6Gek1hWXETMjJQRcg5utwe7xZt4YXKuxRwwTBmjbrnJpF+aWoMJ/NR8=
