@@ -2,4 +2,4 @@
 ## Build
 | website | status |
 | --- | ---| 
-| Travis | [![Build Status](https://www.travis-ci.com/A-New-Dreamer/Hardcore-Questing-Mode-Book.svg?branch=master)](https://www.travis-ci.com/A-New-Dreamer/Hardcore-Questing-Mode-Book) |
+| Travis | [![Travis (.com)](https://img.shields.io/travis/com/A-New-Dreamer/Hardcore-Questing-Mode-Book.svg?style=popout-square)](https://www.travis-ci.com/A-New-Dreamer/Hardcore-Questing-Mode-Book) |
