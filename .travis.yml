@@ -6,13 +6,13 @@ script:
 - rm -rf ./.git
 - rm -rf ./.travis.yml
 - rm -rf ./.gitignore
-- zip -r hqm.zip ./
 deploy:
-  provider: releases
-  api_key: ${key}
-  file: 
-    - "./hqm.zip"
+  provider: pages
   skip_cleanup: true
+  github_token: ${key}
+  keep_history: true
+  local_dir: "./"
+  target_branch: releases
   on:
     tags: true
 after_deploy:
